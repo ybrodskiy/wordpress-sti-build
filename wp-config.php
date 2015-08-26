@@ -18,24 +18,24 @@
  * @package WordPress
  */
 
-$DB_NAME=getenv("DB_NAME")
-$DB_USER=getenv("DB_USER")
-$DB_PASSWORD=getenv("DB_PASSWORD")
-$DB_HOST=getenv("DB_HOST")
+//$DB_NAME=getenv("DB_NAME")
+//$DB_USER=getenv("DB_USER")
+//$DB_PASSWORD=getenv("DB_PASSWORD")
+//$DB_HOST=getenv("DB_HOST")
 
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', $DB_NAME);
+define('DB_NAME', 'wordpress');
 
 /** MySQL database username */
-define('DB_USER', $DB_USER);
+define('DB_USER', 'wordpressuser');
 
 /** MySQL database password */
-define('DB_PASSWORD', $DB_PASSWORD);
+define('DB_PASSWORD', 'password');
 
 /** MySQL hostname */
-define('DB_HOST', $DB_HOST);
+define('DB_HOST', '172.31.6.204');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
