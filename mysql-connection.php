@@ -3,7 +3,7 @@
 # $ php -f db-connect-test.php
 $dbname = getenv("DB_NAME");
 $dbuser = getenv("DB_USER");
-$dbpass = getenv("DB_PASS");
+$dbpass = getenv("DB_PASSWORD");
 $dbhost = getenv("DB_HOST");
 $connect = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
 mysql_select_db($dbname) or die("Could not open the db '$dbname'");
