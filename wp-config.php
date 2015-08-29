@@ -21,8 +21,9 @@
 $DB_NAME = getenv("DB_NAME");
 $DB_USER = getenv("DB_USER");
 $DB_PASSWORD = getenv("DB_PASSWORD");
-$DB_HOST = getenv("WPDATABASE_SERVICE_HOST");
+$DB_SERVICE = getenv("DB_SERVICE");
 
+$DB_HOST = strtoupper($DB_SERVICE) . "_SERVICE_HOST"
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
