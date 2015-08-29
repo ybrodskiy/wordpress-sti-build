@@ -6,7 +6,7 @@ $DB_SERVICE = getenv("DB_SERVICE");
 
 $DB_HOST = strtoupper($DB_SERVICE) . "_SERVICE_HOST";
 
-echo 'DB_HOST' . $DB_HOST;
+echo "DB_HOST: " . $DB_HOST;
 
 $conn = new mysqli($DB_HOST, $DB_USER, $DB_PASSWORD);
 
