@@ -1,21 +1,18 @@
 <?php
-# Fill our vars and run on cli
-# $ php -f db-connect-test.php
-$dbname = getenv("DB_NAME");
-$dbuser = getenv("DB_USER");
-$dbpass = getenv("DB_PASSWORD");
-$dbhost = getenv("DB_HOST");
-$connect = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect to '$dbhost'");
-mysql_select_db($dbname) or die("Could not open the db '$dbname'");
-$test_query = "SHOW TABLES FROM $dbname";
-$result = mysql_query($test_query);
-$tblCnt = 0;
-while($tbl = mysql_fetch_array($result)) {
-  $tblCnt++;
-  #echo $tbl[0]."<br />\n";
-}
-if (!$tblCnt) {
-  echo "There are no tables<br />\n";
-} else {
-  echo "There are $tblCnt tables<br />\n";
-}
+$DB_NAME = getenv("DB_NAME");
+$DB_USER = getenv("DB_USER");
+$DB_PASSWORD = getenv("DB_PASSWORD");
+$DB_SERVICE = getenv("DB_SERVICE");
+
+$DB_HOST = strtoupper($DB_SERVICE) . "_SERVICE_HOST";
+
+echo 'DB_HOST' . $DB_HOST;
+
+$conn = new mysqli($DB_HOST, $DB_USER, $DB_PASSWORD);
+
+if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
+
+?>
