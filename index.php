@@ -11,7 +11,7 @@
  *
  * @var bool
  */
-echo "WordPress STI by Symantec.";
+echo "WordPress STI by Symantec Team.";
 define('WP_USE_THEMES', true);
 
 /** Loads the WordPress Environment and Template */
